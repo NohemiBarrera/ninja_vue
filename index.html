@@ -8,9 +8,10 @@
 </head>
 <body>
 	<div id="vue-app">
-		<h1>{{greet('afternoon')}}</h1>
-		<p>Name: {{name}}</p>
-		<p>Job: {{job}}</p>
+		<h3>Data binding</h3>
+		<a :href="website">Ninja net</a>
+		<input type="text" :value="name">
+		<p v-html="websiteTag"></p>
 	</div>
 
 	<script type="text/javascript" src="app.js"></script>

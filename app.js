@@ -3,6 +3,8 @@ new Vue({	//vue instance
 	data: {
 		name: 'Meme',
 		job: 'Developer',
+		website: 'hhtp://www.thenetninja.co.uk',
+		websiteTag: '<a href="hhtp://www.thenetninja.co.uk">Ninja net</a>'
 	},
 	methods: {
 		greet: function(time){
