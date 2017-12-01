@@ -8,10 +8,13 @@
 </head>
 <body>
 	<div id="vue-app">
-		<h3>Data binding</h3>
-		<a :href="website">Ninja net</a>
-		<input type="text" :value="name">
-		<p v-html="websiteTag"></p>
+		<h3>Events</h3>
+		<button @click="add(1)">Add a year</button>
+		<button v-on:click="subtract(1)">Subtract a year</button>
+		<button @dblclick="add(10)">Add 10 years</button>
+		<button v-on:dblclick="subtract(10)">Subtract ten years</button>
+		<p>My age is: {{age}}</p>
+		<div id="canvas" v-on:mousemove="updateXY">{{ x }},{{ y }}</div>
 	</div>
 
 	<script type="text/javascript" src="app.js"></script>
