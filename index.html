@@ -8,13 +8,18 @@
 </head>
 <body>
 	<div id="vue-app">
-		<h3>Events</h3>
+		<h2>Events</h2>
 		<button @click="add(1)">Add a year</button>
 		<button v-on:click="subtract(1)">Subtract a year</button>
 		<button @dblclick="add(10)">Add 10 years</button>
 		<button v-on:dblclick="subtract(10)">Subtract ten years</button>
 		<p>My age is: {{age}}</p>
 		<div id="canvas" v-on:mousemove="updateXY">{{ x }},{{ y }}</div>
+		<h2>Keyboard events</h2>
+		<label>Name:</label>
+		<input type="text" v-on:keyup.enter="logName" />
+		<label>Age:</label>
+		<input type="text" v-on:keyup.enter="logAge" />
 	</div>
 
 	<script type="text/javascript" src="app.js"></script>

@@ -15,6 +15,12 @@ new Vue({	//vue instance
 		updateXY:function(event){
 			this.x = event.offsetX;
 			this.y = event.offsetY;
+		},
+		logName: function(){
+			console.log('you entered your name');
+		},
+		logAge: function(){
+			console.log('you entered your age');
 		}
 	}
 }); 
