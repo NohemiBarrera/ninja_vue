@@ -1,15 +1,24 @@
 new Vue({	//vue instance
 	el:'#vue-app',	//this is what the instance gonna control
 	data: {
-		name: '',
-		age: ''
+		age: 23,
+		a: 0,
+		b: 0
 	},
 	methods: {
-		logName: function(){
-			console.log('you enter your name')
+		/*addToA: function(){
+			return this.a + this.age;
 		},
-		logAge: function(){
-			console.log('you enter you age')
+		addToB: function(){
+			return this.b + this.age;
+		}*/
+	},
+	computed:{
+		addToA: function(){
+			return this.a + this.age;
+		},
+		addToB: function(){
+			return this.b + this.age;
 		}
 	}
 }); 
