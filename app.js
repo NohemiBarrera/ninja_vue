@@ -1,17 +1,32 @@
-new Vue({	//vue instance
-	el:'#vue-app',	//this is what the instance gonna control
+var one = new Vue({
+	el:'#vue-app-one',
 	data: {
-		characters:['Mario', 'Luigi', 'Yoshi', 'Bowser'],
-		ninjas: [
-			{name:'Meme', age: 25},
-			{name: 'Yoshi', age: 35},
-			{name: 'Ken', age: 55}
-		]
+		title: 'Vue App One'
 	},
 	methods: {
 		
 	},
 	computed:{
-		
+		greet: function(){
+			return 'Hello from app one';
+		}
 	}
 }); 
+var two = new Vue({
+	el:'#vue-app-two',
+	data: {
+		title: 'Vue App Two'
+	},
+	methods: {
+		changeTitle: function(){
+			one.title = "Title changed";
+		}
+	},
+	computed:{
+		greet: function(){
+			return 'Holo, app two!'
+		}
+	}
+});
+
+two.title = "Changeed from outside";
